@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary:#96A495;
+    --secondary: #DBDF92;
+    --tertiary: #A97D58;
+    --other1:#356aba;
+    --other2: #E3651D;
+    --other3: #750E21;
+    --other4: #005B41;
+    background: #000;
+}
+
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px 12px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". about . projets . truc . contact ."
+      "insta projet1 projet1 projet2 projet2 projet3 html css hard-skills"
+      ". projet1 projet1 projet2 projet2 projet3 javaScript figma hard-skills"
+      "github projet4 projet4 projet2 projet2 . compet5 compet6 hard-skills"
+      ". projet4 projet4 projet5 projet5 projet5 compet7 compet8 hard-skills"
+      "linkedin projet4 projet4 projet5 projet5 projet5 . . ."
+      ". sk4 sk5 sk6 skill2 skill2 skill1 skill1 soft-skills"
+      "blog skill3 skill3 skill3 skill2 skill2 skill1 skill1 soft-skills"
+      ". skill3 skill3 skill3 skill2 skill2 . . soft-skills"
+      "footer footer footer footer footer footer footer footer footer";
+      background-color: var(--secondary);
+height: 100vh;
+      padding: 20px;
+}
+  .container>div{
+    border: 1px solid #000;
+  }
+  
+  .about { grid-area: about;
+background-color: var(--other1); 
+
+}
+  
+  .contact { grid-area: contact; 
+background-color: #005B41; }
+  
+  .insta { grid-area: insta;
+background-color: #356aba; }
+  
+  .github { grid-area: github;
+background-color: #750E21; }
+  
+  .linkedin { grid-area: linkedin; }
+  
+  .blog { grid-area: blog; }
+  
+  .projet1 { grid-area: projet1; }
+  
+  .html { grid-area: html; }
+  
+  .css { grid-area: css; }
+  
+  .javaScript { grid-area: javaScript; }
+  
+  .figma { grid-area: figma; }
+  
+  .compet5 { grid-area: compet5; }
+  
+  .compet6 { grid-area: compet6; }
+  
+  .compet7 { grid-area: compet7; }
+  
+  .compet8 { grid-area: compet8; }
+  
+  .projets { grid-area: projets; }
+  
+  .truc { grid-area: truc; }
+  
+  .projet4 { grid-area: projet4; }
+  
+  .projet2 { grid-area: projet2; }
+  
+  .projet3 { grid-area: projet3; }
+  
+  .projet5 { grid-area: projet5; }
+  
+  .soft-skills { grid-area: soft-skills; }
+  
+  .hard-skills { grid-area: hard-skills; }
+  
+  .skill1 { grid-area: skill1; }
+  
+  .skill2 { grid-area: skill2; }
+  
+  .skill3 { grid-area: skill3; }
+  
+  .sk4 { grid-area: sk4; }
+  
+  .sk5 { grid-area: sk5; }
+  
+  .sk6 { grid-area: sk6; }
+  
+  .footer { grid-area: footer; }
+  
