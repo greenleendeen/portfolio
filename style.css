@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-:root {
+/*:root {
     --primary:#96A495;
     --secondary: #DBDF92;
     --tertiary: #A97D58;
@@ -13,6 +13,21 @@
     --other3: #750E21;
     --other4: #005B41;
     background: #000;
+}*/
+
+:root {
+  --primary:#1B9C85;
+  --secondary: #F1F5A8;
+  --tertiary: #FF9BD2;
+  --other1:#356aba;
+  --other2: #E3651D;
+  --other3: #CDF5FD;
+  --other4: #005B41;
+  background: #000;
+  --other5: #A3C9AA;
+  --otherSecondary: #1E3D6D;
+  
+
 }
 
 
@@ -22,7 +37,7 @@
     gap: 15px 12px;
     grid-auto-flow: row;
     grid-template-areas:
-      ". about . projets . truc . contact ."
+      ". truc . projets . about . contact ."
       "insta projet1 projet1 projet2 projet2 projet3 html css hard-skills"
       ". projet1 projet1 projet2 projet2 projet3 javaScript figma hard-skills"
       "github projet4 projet4 projet2 projet2 . compet5 compet6 hard-skills"
@@ -32,12 +47,15 @@
       "blog skill3 skill3 skill3 skill2 skill2 skill1 skill1 soft-skills"
       ". skill3 skill3 skill3 skill2 skill2 . . soft-skills"
       "footer footer footer footer footer footer footer footer footer";
-      background-color: var(--secondary);
+      background-color: black;
 height: 100vh;
       padding: 20px;
+
+  
+      
 }
   .container>div{
-    border: 1px solid #000;
+    border: 1px solid var(--other4);
   }
   
   .about { grid-area: about;
@@ -46,13 +64,13 @@ background-color: var(--other1);
 }
   
   .contact { grid-area: contact; 
-background-color: #005B41; }
+background-color:var(--other4); }
   
   .insta { grid-area: insta;
-background-color: #356aba; }
+background-color: var(--other5); }
   
   .github { grid-area: github;
-background-color: #750E21; }
+background-color:var(--tertiary); }
   
   .linkedin { grid-area: linkedin; }
   
@@ -62,25 +80,34 @@ background-color: #750E21; }
   
   .html { grid-area: html; }
   
-  .css { grid-area: css; }
+  .css { grid-area: css;
+  background-color: var(--tertiary); }
   
   .javaScript { grid-area: javaScript; }
   
-  .figma { grid-area: figma; }
+  .figma { grid-area: figma;
+  background-color: var(--other3); }
   
   .compet5 { grid-area: compet5; }
   
-  .compet6 { grid-area: compet6; }
+  .compet6 { grid-area: compet6;
+  background-color: var(--secondary);
+  }
   
   .compet7 { grid-area: compet7; }
   
-  .compet8 { grid-area: compet8; }
+  .compet8 { grid-area: compet8;
+  
+  background-color: var(--other5);
+border-radius: 10px;
+}
   
   .projets { grid-area: projets; }
   
   .truc { grid-area: truc; }
   
-  .projet4 { grid-area: projet4; }
+  .projet4 { grid-area: projet4; 
+  background-color: var(--primary);}
   
   .projet2 { grid-area: projet2; }
   
@@ -117,16 +144,19 @@ background-color: #750E21; }
   .gridd-anim {
     padding: 5%;
     gap:3%;
-    background-color: black;
+    background-color:black;
   } 
 
+  .border10 {
+    border-radius: 10px;
+  }
   .box1 {
    width: 30%;
    height: 30%;
    border-radius: 11px;
 background: linear-gradient(315deg, #305fa7, #3971c7);
-box-shadow:  -5px -5px 9px #3367b4,
-             5px 5px 9px #376dc0;
+box-shadow:  -1px -1px 5px #3367b4,
+             1px 1px 5px #376dc0;
    
    }
    .box2 {
@@ -135,8 +165,8 @@ box-shadow:  -5px -5px 9px #3367b4,
    
     border-radius: 11px;
     background: linear-gradient(315deg, #cc5b1a, #f36c1f);
-    box-shadow:  -5px -5px 9px #dc621c,
-                 5px 5px 9px #ea681e;
+    box-shadow:  -1px -1px 5px #dc621c,
+                 1px 1px 5px #ea681e;
    }
   .box3 {
     width: 30%;
@@ -144,8 +174,8 @@ box-shadow:  -5px -5px 9px #3367b4,
    
     border-radius: 11px;
     background: linear-gradient(315deg, #00523b, #006146);
-    box-shadow:  -5px -5px 9px #00583f,
-                 5px 5px 9px #005e43;
+    box-shadow:  1px -1px 5px #00583f,
+                 1px 1px 5px #005e43;
    }
 
 /* ici les parametres css de ma carte de présentation */
@@ -188,3 +218,126 @@ box-shadow:  -5px -5px 9px #3367b4,
 
 
 
+h2 {
+  color: var(--other3);
+}
+
+/* NAV*/
+ul { 
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  background: #1a1a1a;
+}
+
+.linck-group {
+  list-style: none;
+  display: flex;
+}
+
+.link a {
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 30px;
+  margin: 0 20px;
+  line-height: 80px;
+  transition: .5s;
+  font-size: 20px;
+}
+.link a:hover, .link.active a {
+  opacity: 1;
+}
+
+.home-section {
+  width: 100;
+  height: 100vh;
+  padding: 0 150px;
+  display: flex;
+  align-items: center;
+  /*position: relative;*/
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  transition: 1s;
+}
+
+.hero-heading {
+  color: #fff;
+  font-size: 120px;
+  text-transform:capitalize ;
+  font-weight: 300;
+}
+
+.home-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.home-section.active , .project-section.active, 
+.about-section.active, .contact-section.active {
+  position: relative;
+  opacity: 1;
+  z-index: 8;
+}
+
+/*NAVS Laterales*/
+/*Navigations latérales fixes ou sticky*/
+.nav-left, .nav-right{
+  position:fixed;
+  top: 30%;
+
+}
+.nav-left{
+  left:8px;
+}
+.nav-left li{
+  margin-top: 16px;
+}
+.nav-right{
+  right: 8px;
+  text-align: right;
+  border-right: 2px solid var(--white);
+}
+.nav-right li a{
+  display: block;
+  font-size: 22px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+/* ++ */
+nav ul li{
+  list-style: none;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+header nav a, .button{
+  font-weight: bold;
+}
+
+nav ul li a:hover, header a:hover{
+  color: var(--yellow);
+}
