@@ -47,8 +47,8 @@
       "blog skill3 skill3 skill3 skill2 skill2 skill1 skill1 soft-skills"
       ". skill3 skill3 skill3 skill2 skill2 . . soft-skills"
       "footer footer footer footer footer footer footer footer footer";
-      background-color: black;
-height: 100vh;
+      background-color: #1a1a1a;
+/*height: 100vh;*/
       padding: 20px;
 
   
@@ -67,12 +67,28 @@ background-color: var(--other1);
 background-color:var(--other4); }
   
   .insta { grid-area: insta;
-background-color: var(--other5); }
+background-color: var(--other5);
+display: grid;
+align-items: center;
+justify-content: center; }
   
   .github { grid-area: github;
 background-color:var(--tertiary); }
   
-  .linkedin { grid-area: linkedin; }
+  .linkedin { grid-area: linkedin;
+  background-color: var(--other4);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .rezo150 {
+    width: 150px;
+    height: 150px;
+  }
+  .rezo img {
+    width: 100%;
+  }
   
   .blog { grid-area: blog; }
   
@@ -103,8 +119,22 @@ border-radius: 10px;
 }
   
   .projets { grid-area: projets; }
+
+  .projets img {
+    width: 100%;
+    height: auto;
+  }
   
-  .truc { grid-area: truc; }
+  .truc { grid-area: truc;
+  background-color: var(--otherSecondary);
+  display: grid;
+  align-items: center;
+  justify-content: center; }
+
+  .truc img{
+    width: 60%;
+    border-radius: 5%;
+  }
   
   .projet4 { grid-area: projet4; 
   background-color: var(--primary);}
@@ -119,7 +149,12 @@ border-radius: 10px;
   
   .hard-skills { grid-area: hard-skills; }
   
-  .skill1 { grid-area: skill1; }
+  .skill1 { grid-area: skill1; 
+  background-color: var(--otherSecondary);}
+  .skill1 img {
+    width: 30%;
+    height: auto;
+  }
   
   .skill2 { grid-area: skill2; }
   
@@ -140,11 +175,24 @@ border-radius: 10px;
   flex-wrap: wrap;
 }
 
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spaceAround {
+  display: flex;
+  justify-content: space-around;
+
+}
+
   /* la dive conteiner class skill2 avec des dives colorées dedans*/
   .gridd-anim {
     padding: 5%;
     gap:3%;
     background-color:black;
+    width: 200px;
+    height:200px;
   } 
 
   .border10 {
