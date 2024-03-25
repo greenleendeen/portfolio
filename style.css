@@ -17,7 +17,7 @@
 
 
 .container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2.5fr 0.5fr 2.5fr 0.3fr 2.5fr 0.3fr 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 15px 12px;
     grid-auto-flow: row;
@@ -106,3 +106,85 @@ background-color: #750E21; }
   
   .footer { grid-area: footer; }
   
+
+  /* classes generales */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  /* la dive conteiner class skill2 avec des dives colorées dedans*/
+  .gridd-anim {
+    padding: 5%;
+    gap:3%;
+    background-color: black;
+  } 
+
+  .box1 {
+   width: 30%;
+   height: 30%;
+   border-radius: 11px;
+background: linear-gradient(315deg, #305fa7, #3971c7);
+box-shadow:  -5px -5px 9px #3367b4,
+             5px 5px 9px #376dc0;
+   
+   }
+   .box2 {
+    width: 30%;
+    height: 30%;
+   
+    border-radius: 11px;
+    background: linear-gradient(315deg, #cc5b1a, #f36c1f);
+    box-shadow:  -5px -5px 9px #dc621c,
+                 5px 5px 9px #ea681e;
+   }
+  .box3 {
+    width: 30%;
+    height: 30%;
+   
+    border-radius: 11px;
+    background: linear-gradient(315deg, #00523b, #006146);
+    box-shadow:  -5px -5px 9px #00583f,
+                 5px 5px 9px #005e43;
+   }
+
+/* ici les parametres css de ma carte de présentation */
+.card {
+  max-width: 300px;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+}
+
+.card a {
+  text-decoration: none
+}
+
+.content {
+  padding: 1.1rem;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 110px;
+  background-color: var(--other2);
+}
+
+.title {
+  color: #111827;
+  font-size: 1rem;
+  
+  font-weight: 600;
+}
+
+.desc {
+  margin-top: 0.5rem;
+  color: #6B7280;
+  font-size: 0.875rem;
+  
+}
+
+
+
