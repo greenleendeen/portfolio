@@ -49,22 +49,26 @@
       "footer footer footer footer footer footer footer footer footer";
       background-color: #1a1a1a;
 /*height: 100vh;*/
-      padding: 20px;
-
-  
-      
+      padding: 20px;  
 }
   .container>div{
     border: 1px solid var(--other4);
   }
   
   .about { grid-area: about;
-background-color: var(--other1); 
+background-color: var(--other1);
+display: grid;
+width: 150px;
+height: 100px;; 
 
 }
   
   .contact { grid-area: contact; 
-background-color:var(--other4); }
+background-color:var(--other4);
+display: grid;
+width: 150px;
+height: 100px;; 
+ }
   
   .insta { grid-area: insta;
 background-color: var(--other5);
@@ -73,7 +77,10 @@ align-items: center;
 justify-content: center; }
   
   .github { grid-area: github;
-background-color:var(--tertiary); }
+background-color:var(--tertiary);
+display: grid; 
+align-items: center;
+justify-content: center;}
   
   .linkedin { grid-area: linkedin;
   background-color: var(--other4);
@@ -102,12 +109,12 @@ background-color:var(--tertiary); }
   .javaScript { grid-area: javaScript; }
   
   .figma { grid-area: figma;
-  background-color: var(--other3); }
+  background-color: var(--other4); }
   
   .compet5 { grid-area: compet5; }
   
   .compet6 { grid-area: compet6;
-  background-color: var(--secondary);
+  background-color: var(--tertiary);
   }
   
   .compet7 { grid-area: compet7; }
@@ -118,18 +125,24 @@ background-color:var(--tertiary); }
 border-radius: 10px;
 }
   
-  .projets { grid-area: projets; }
+  .projets { grid-area: projets; 
+  display: grid;
+  width: 150px;
+  height: 100px;}
 
   .projets img {
-    width: 100%;
+    width: 70%;
     height: auto;
+
   }
   
   .truc { grid-area: truc;
   background-color: var(--otherSecondary);
-  display: grid;
-  align-items: center;
-  justify-content: center; }
+  display: grid; 
+align-items: center;
+justify-content: center;
+width: 150px;
+height: 100px;}
 
   .truc img{
     width: 60%;
@@ -141,7 +154,10 @@ border-radius: 10px;
   
   .projet2 { grid-area: projet2; }
   
-  .projet3 { grid-area: projet3; }
+  /* presentCard image + presentation*/
+  .projet3 { grid-area: projet3; 
+    display: grid;
+  width: 20%;}
   
   .projet5 { grid-area: projet5; }
   
@@ -149,17 +165,19 @@ border-radius: 10px;
   
   .hard-skills { grid-area: hard-skills; }
   
+  /* skill1: chess*/
   .skill1 { grid-area: skill1; 
-  background-color: var(--otherSecondary);}
-  .skill1 img {
-    width: 30%;
-    height: auto;
-  }
+  display: grid;}
+
+  /* skill2: pad animé*/
+  .skill2 { grid-area: skill2; 
+    }
   
-  .skill2 { grid-area: skill2; }
+  .skill3 { grid-area: skill3;
+  display: grid;
+ }
   
-  .skill3 { grid-area: skill3; }
-  
+ /* boocks card*/
   .sk4 { grid-area: sk4; }
   
   .sk5 { grid-area: sk5; }
@@ -186,13 +204,13 @@ border-radius: 10px;
 
 }
 
-  /* la dive conteiner class skill2 avec des dives colorées dedans*/
+  /* la dive qui contient la  class skill2 avec des dives colorées dedans*/
   .gridd-anim {
     padding: 5%;
-    gap:3%;
+    gap:4%;
     background-color:black;
-    width: 200px;
-    height:200px;
+
+ 
   } 
 
   .border10 {
@@ -227,15 +245,16 @@ box-shadow:  -1px -1px 5px #3367b4,
    }
 
 /* ici les parametres css de ma carte de présentation */
-.card {
-  max-width: 300px;
+.presentCard {
+ width:300px;
+ height: 300px;
   border-radius: 0.5rem;
   background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   border: 1px solid transparent;
 }
 
-.card a {
+.presentCard a {
   text-decoration: none
 }
 
@@ -248,6 +267,7 @@ box-shadow:  -1px -1px 5px #3367b4,
   width: 100%;
   height: 110px;
   background-color: var(--other2);
+  
 }
 
 .title {
@@ -350,42 +370,220 @@ ul {
   z-index: 8;
 }
 
-/*NAVS Laterales*/
-/*Navigations latérales fixes ou sticky*/
-.nav-left, .nav-right{
-  position:fixed;
-  top: 30%;
 
+
+/* case Skill 3 soft: livres*/
+.BoocksCard {
+  width: 210px;
+  height: 254px;
+  border-radius: 4px;
+  background: #212121;
+  display: flex;
+  gap: 5px;
+  padding: .4em;
 }
-.nav-left{
-  left:8px;
+
+.BoocksCard p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .5s;
+  background: #1a1a1a;
+  border: 1px solid #005B41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.nav-left li{
-  margin-top: 16px;
+
+.BoocksCard p:hover {
+  flex: 4;
 }
-.nav-right{
-  right: 8px;
-  text-align: right;
-  border-right: 2px solid var(--white);
+
+.BoocksCard p span {
+  min-width: 14em;
+  padding: .5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all .5s;
+  text-transform: uppercase;
+  color: #005B41;
+  letter-spacing: .1em;
 }
-.nav-right li a{
-  display: block;
-  font-size: 22px;
-  margin-bottom: 16px;
+
+.BoocksCard p:hover span {
+  transform: rotate(0);
+}
+
+
+/*cheesCard*/
+.cheesCard {
+  width:500px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.cheesCard-inner {
   width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
 }
 
-/* ++ */
-nav ul li{
-  list-style: none;
-  margin-left: 16px;
-  margin-right: 16px;
+.cheesCard:hover .cheesCard-inner {
+  transform: rotateY(180deg);
 }
 
-header nav a, .button{
-  font-weight: bold;
+.cheesCard-front,
+.cheesCard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
 
-nav ul li a:hover, header a:hover{
-  color: var(--yellow);
+.cheesCard-front {
+  background-color: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid var(--primary);
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.cheesCard-back {
+  background-color:var(--other4);
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  border: 10px solid var(--other4);
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 10x;
+  transform: rotateY(180deg);
+}
+.cheesCard-back img {
+  width: 100%;
+  height: auto;
+}
+
+.cheesCard-back p {
+  width: 30%;}
+
+  /* mle formulaire */,,
+  .container {
+  width: 350px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #396afc;
+  background: linear-gradient(to right, #005c97, #363795);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.container form .descr {
+  font-size: 20px;
+  font-weight: 500;
+  color: #e8e8e8;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input, textarea {
+  margin: 1em 0 1em 0;
+  width: 300px;
+  position: relative;
+}
+
+.input input, textarea {
+  font-size: 100%;
+  padding: 0.7em;
+  outline: none;
+  color: #e8e8e8;
+  border: none;
+  border-bottom: 2px solid #e8e8e8;
+  background: transparent;
+  border-radius: none;
+  width: 100%;
+  resize: none;
+}
+
+.input label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  color: #e8e8e8;
+  padding: 0.7em;
+  margin-left: 0.1em;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+}
+
+.input :is(input:focus, input:valid)~label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.input textarea:focus ~ label,
+.input textarea:valid ~ label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(37, 37, 211);
+}
+
+.form button {
+  color: #e8e8e8;
+  font-size: 15px;
+  align-self: flex-start;
+  padding: 0.6em;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 50px;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.form button:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e8e8e8;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form button:hover:before {
+  opacity: 0.2;
+}
+
+.form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
