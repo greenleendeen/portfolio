@@ -1,193 +1,117 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*:root {
-    --primary:#96A495;
-    --secondary: #DBDF92;
-    --tertiary: #A97D58;
-    --other1:#356aba;
-    --other2: #E3651D;
-    --other3: #750E21;
-    --other4: #005B41;
-    background: #000;
-}*/
-
 :root {
-  --primary:#1B9C85;
+  --primary: #1B9C85;
   --secondary: #F1F5A8;
   --tertiary: #FF9BD2;
-  --other1:#356aba;
+  --other1: #356aba;
   --other2: #E3651D;
   --other3: #CDF5FD;
   --other4: #005B41;
-  background: #000;
+  background: #A3C9AA;
+  ;
   --other5: #A3C9AA;
   --otherSecondary: #1E3D6D;
-  
+
 
 }
 
-
-.container {  display: grid;
-    grid-template-columns: 1fr 2.5fr 0.5fr 2.5fr 0.3fr 2.5fr 0.3fr 3fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 15px 12px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      ". truc . projets . about . contact ."
-      "insta projet1 projet1 projet2 projet2 projet3 html css hard-skills"
-      ". projet1 projet1 projet2 projet2 projet3 javaScript figma hard-skills"
-      "github projet4 projet4 projet2 projet2 . compet5 compet6 hard-skills"
-      ". projet4 projet4 projet5 projet5 projet5 compet7 compet8 hard-skills"
-      "linkedin projet4 projet4 projet5 projet5 projet5 . . ."
-      ". sk4 sk5 sk6 skill2 skill2 skill1 skill1 soft-skills"
-      "blog skill3 skill3 skill3 skill2 skill2 skill1 skill1 soft-skills"
-      ". skill3 skill3 skill3 skill2 skill2 . . soft-skills"
-      "footer footer footer footer footer footer footer footer footer";
-      background-color: #1a1a1a;
-/*height: 100vh;*/
-      padding: 20px;  
-}
-  .container>div{
-    border: 1px solid var(--other4);
-  }
-  
-  .about { grid-area: about;
-background-color: var(--other1);
-display: grid;
-width: 150px;
-height: 100px;; 
-
-}
-  
-  .contact { grid-area: contact; 
-background-color:var(--other4);
-display: grid;
-width: 150px;
-height: 100px;; 
- }
-  
-  .insta { grid-area: insta;
-background-color: var(--other5);
-display: grid;
-align-items: center;
-justify-content: center; }
-  
-  .github { grid-area: github;
-background-color:var(--tertiary);
-display: grid; 
-align-items: center;
-justify-content: center;}
-  
-  .linkedin { grid-area: linkedin;
-  background-color: var(--other4);
+/*le conteiner grid*/
+.container {
   display: grid;
-  align-items: center;
-  justify-content: center;
-  }
-
-  .rezo150 {
-    width: 150px;
-    height: 150px;
-  }
-  .rezo img {
-    width: 100%;
-  }
-  
-  .blog { grid-area: blog; }
-  
-  .projet1 { grid-area: projet1; }
-  
-  .html { grid-area: html; }
-  
-  .css { grid-area: css;
-  background-color: var(--tertiary); }
-  
-  .javaScript { grid-area: javaScript; }
-  
-  .figma { grid-area: figma;
-  background-color: var(--other4); }
-  
-  .compet5 { grid-area: compet5; }
-  
-  .compet6 { grid-area: compet6;
-  background-color: var(--tertiary);
-  }
-  
-  .compet7 { grid-area: compet7; }
-  
-  .compet8 { grid-area: compet8;
-  
-  background-color: var(--other5);
-border-radius: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 15px 12px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "about about about projets projets projets contact contact contact"
+    "projet1 projet1 projet1 projet1 projet1 projet2 projet2 projet2 projet2"
+    "projet1 projet1 projet1 projet1 projet1 projet2 projet2 projet2 projet2"
+    "projet1 projet1 projet1 projet1 projet1 projet2 projet2 projet2 projet2"
+    "html css javaScript php projet3 projet3 projet3 projet3 projet3"
+    "sql figma notion frameworks projet3 projet3 projet3 projet3 projet3"
+    "lib lib lib chess chess chess pad pad pad"
+    "lib lib lib chess chess chess pad pad pad"
+    "lib lib lib chess chess chess pad pad pad";
 }
-  
-  .projets { grid-area: projets; 
-  display: grid;
-  width: 150px;
-  height: 100px;}
 
-  .projets img {
-    width: 70%;
-    height: auto;
+/* les parametres des grid-area*/
+.about {
+  grid-area: about;
+  background-color: #005B41;
+}
 
-  }
-  
-  .truc { grid-area: truc;
-  background-color: var(--otherSecondary);
-  display: grid; 
-align-items: center;
-justify-content: center;
-width: 150px;
-height: 100px;}
+.projets {
+  grid-area: projets;
+  background-color: #356aba;
+}
 
-  .truc img{
-    width: 60%;
-    border-radius: 5%;
-  }
-  
-  .projet4 { grid-area: projet4; 
-  background-color: var(--primary);}
-  
-  .projet2 { grid-area: projet2; }
-  
-  /* presentCard image + presentation*/
-  .projet3 { grid-area: projet3; 
-    display: grid;
-  width: 20%;}
-  
-  .projet5 { grid-area: projet5; }
-  
-  .soft-skills { grid-area: soft-skills; }
-  
-  .hard-skills { grid-area: hard-skills; }
-  
-  /* skill1: chess*/
-  .skill1 { grid-area: skill1; 
-  display: grid;}
+.contact {
+  grid-area: contact;
+  background-color: #FF9BD2;
+}
 
-  /* skill2: pad animé*/
-  .skill2 { grid-area: skill2; 
-    }
-  
-  .skill3 { grid-area: skill3;
-  display: grid;
- }
-  
- /* boocks card*/
-  .sk4 { grid-area: sk4; }
-  
-  .sk5 { grid-area: sk5; }
-  
-  .sk6 { grid-area: sk6; }
-  
-  .footer { grid-area: footer; }
-  
+.projet1 {
+  grid-area: projet1;
+}
 
-  /* classes generales */
+.projet2 {
+  grid-area: projet2;
+}
+
+.html {
+  grid-area: html;
+}
+
+.css {
+  grid-area: css;
+}
+
+.javaScript {
+  grid-area: javaScript;
+}
+
+.php {
+  grid-area: php;
+}
+
+.sql {
+  grid-area: sql;
+}
+
+.figma {
+  grid-area: figma;
+}
+
+.notion {
+  grid-area: notion;
+}
+
+.frameworks {
+  grid-area: frameworks;
+}
+
+.projet3 {
+  grid-area: projet3;
+}
+
+.lib {
+  grid-area: lib;
+}
+
+.chess {
+  grid-area: chess;
+}
+
+.pad {
+  grid-area: pad;
+}
+
+/* classes generales */
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -201,178 +125,53 @@ height: 100px;}
 .spaceAround {
   display: flex;
   justify-content: space-around;
+}
+
+/* la dive qui contient la  class 'pad' dans les grids avec des dives colorées dedans*/
+.gridd-anim {
+  padding: 5%;
+  gap: 4%;
+  background-color: #212121;
+  width: 300px;
+  height: 300px;
 
 }
 
-  /* la dive qui contient la  class skill2 avec des dives colorées dedans*/
-  .gridd-anim {
-    padding: 5%;
-    gap:4%;
-    background-color:black;
-
- 
-  } 
-
-  .border10 {
-    border-radius: 10px;
-  }
-  .box1 {
-   width: 30%;
-   height: 30%;
-   border-radius: 11px;
-background: linear-gradient(315deg, #305fa7, #3971c7);
-box-shadow:  -1px -1px 5px #3367b4,
-             1px 1px 5px #376dc0;
-   
-   }
-   .box2 {
-    width: 30%;
-    height: 30%;
-   
-    border-radius: 11px;
-    background: linear-gradient(315deg, #cc5b1a, #f36c1f);
-    box-shadow:  -1px -1px 5px #dc621c,
-                 1px 1px 5px #ea681e;
-   }
-  .box3 {
-    width: 30%;
-    height: 30%;
-   
-    border-radius: 11px;
-    background: linear-gradient(315deg, #00523b, #006146);
-    box-shadow:  1px -1px 5px #00583f,
-                 1px 1px 5px #005e43;
-   }
-
-/* ici les parametres css de ma carte de présentation */
-.presentCard {
- width:300px;
- height: 300px;
-  border-radius: 0.5rem;
-  background-color: #fff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  border: 1px solid transparent;
+.border10 {
+  border-radius: 10px;
 }
 
-.presentCard a {
-  text-decoration: none
+.box1 {
+  width: 30%;
+  height: 30%;
+  border-radius: 11px;
+  background: linear-gradient(315deg, #305fa7, #3971c7);
+  box-shadow: -1px -1px 5px #3367b4,
+    1px 1px 5px #376dc0;
+
 }
 
-.content {
-  padding: 1.1rem;
+.box2 {
+  width: 30%;
+  height: 30%;
+
+  border-radius: 11px;
+  background: linear-gradient(315deg, #cc5b1a, #f36c1f);
+  box-shadow: -1px -1px 5px #dc621c,
+    1px 1px 5px #ea681e;
 }
 
-.image {
-  object-fit: cover;
-  width: 100%;
-  height: 110px;
-  background-color: var(--other2);
-  
+.box3 {
+  width: 30%;
+  height: 30%;
+
+  border-radius: 11px;
+  background: linear-gradient(315deg, #00523b, #006146);
+  box-shadow: 1px -1px 5px #00583f,
+    1px 1px 5px #005e43;
 }
 
-.title {
-  color: #111827;
-  font-size: 1rem;
-  
-  font-weight: 600;
-}
-
-.desc {
-  margin-top: 0.5rem;
-  color: #6B7280;
-  font-size: 0.875rem;
-  
-}
-
-
-
-h2 {
-  color: var(--other3);
-}
-
-/* NAV*/
-ul { 
-  width: 100%;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
- 
-}
-
-.navbar {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9;
-  background: #1a1a1a;
-}
-
-.linck-group {
-  list-style: none;
-  display: flex;
-}
-
-.link a {
-  color: #fff;
-  opacity: 0.5;
-  text-decoration: none;
-  text-transform: capitalize;
-  padding: 10px 30px;
-  margin: 0 20px;
-  line-height: 80px;
-  transition: .5s;
-  font-size: 20px;
-}
-.link a:hover, .link.active a {
-  opacity: 1;
-}
-
-.home-section {
-  width: 100;
-  height: 100vh;
-  padding: 0 150px;
-  display: flex;
-  align-items: center;
-  /*position: relative;*/
-  position: fixed;
-  top: 0;
-  opacity: 0;
-  transition: 1s;
-}
-
-.hero-heading {
-  color: #fff;
-  font-size: 120px;
-  text-transform:capitalize ;
-  font-weight: 300;
-}
-
-.home-img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 50%;
-  object-fit: cover;
-  opacity: 0.2;
-}
-
-.home-section.active , .project-section.active, 
-.about-section.active, .contact-section.active {
-  position: relative;
-  opacity: 1;
-  z-index: 8;
-}
-
-
-
-/* case Skill 3 soft: livres*/
+/* case 'lib' soft skill: livres*/
 .BoocksCard {
   width: 210px;
   height: 254px;
@@ -416,10 +215,9 @@ ul {
   transform: rotate(0);
 }
 
-
 /*cheesCard*/
 .cheesCard {
-  width:500px;
+  width: 500px;
   height: 400px;
   perspective: 1000px;
 }
@@ -457,7 +255,7 @@ ul {
 }
 
 .cheesCard-back {
-  background-color:var(--other4);
+  background-color: var(--other4);
   color: #fff;
   display: flex;
   align-items: flex-end;
@@ -467,29 +265,31 @@ ul {
   font-size: 10x;
   transform: rotateY(180deg);
 }
+
 .cheesCard-back img {
   width: 100%;
   height: auto;
 }
 
 .cheesCard-back p {
-  width: 30%;}
+  width: 30%;
+}
 
-  /* mle formulaire */,,
-  .container {
-  width: 350px;
-  height: 400px;
+/* le formulaire */
+.containerForm {
+  width: 60%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   border-radius: 3px;
-  border: 1px solid #396afc;
-  background: linear-gradient(to right, #005c97, #363795);
+  border: 1px solid var(--other5);
+  background: linear-gradient(to right, #4e8760, #27a66d);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.container form .descr {
+.containerForm form .descr {
   font-size: 20px;
   font-weight: 500;
   color: #e8e8e8;
@@ -503,13 +303,15 @@ ul {
   flex-direction: column;
 }
 
-.input, textarea {
+.input,
+textarea {
   margin: 1em 0 1em 0;
   width: 300px;
   position: relative;
 }
 
-.input input, textarea {
+.input input,
+textarea {
   font-size: 100%;
   padding: 0.7em;
   outline: none;
@@ -541,8 +343,8 @@ ul {
   background: transparent;
 }
 
-.input textarea:focus ~ label,
-.input textarea:valid ~ label {
+.input textarea:focus~label,
+.input textarea:valid~label {
   transform: translateY(-50%) scale(.9);
   margin: 0em;
   padding: 0.4em;
