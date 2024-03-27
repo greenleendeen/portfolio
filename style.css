@@ -63,6 +63,20 @@
   grid-area: projet2;
 }
 
+/* hard skills*/
+.logoSkill {
+  display: flex;
+  align-items: center;
+  border: 10px solid var(--primary);
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.logoSkill img {
+  width: 50px;
+  height: 50px;
+}
 .html {
   grid-area: html;
 }
@@ -95,6 +109,7 @@
   grid-area: frameworks;
 }
 
+/* à droite des hard skills*/
 .projet3 {
   grid-area: projet3;
 }
@@ -132,8 +147,8 @@
   padding: 5%;
   gap: 4%;
   background-color: #212121;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
 
 }
 
@@ -173,8 +188,9 @@
 
 /* case 'lib' soft skill: livres*/
 .BoocksCard {
-  width: 210px;
-  height: 254px;
+  margin-left: 15%;
+  width: 450px;
+  height: 350px;
   border-radius: 4px;
   background: #212121;
   display: flex;
@@ -216,13 +232,13 @@
 }
 
 /*cheesCard*/
-.cheesCard {
-  width: 500px;
-  height: 400px;
+.chessCard {
+  width: 450px;
+  height: 350px;
   perspective: 1000px;
 }
 
-.cheesCard-inner {
+.chessCard-inner {
   width: 100%;
   height: 100%;
   position: relative;
@@ -230,19 +246,19 @@
   transition: transform 0.999s;
 }
 
-.cheesCard:hover .cheesCard-inner {
+.chessCard:hover .cheesCard-inner {
   transform: rotateY(180deg);
 }
 
-.cheesCard-front,
-.cheesCard-back {
+.chessCard-front,
+.chessCard-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
 
-.cheesCard-front {
+.chessCard-front {
   background-color: var(--primary);
   color: #fff;
   display: flex;
@@ -254,7 +270,7 @@
   transform: rotateY(0deg);
 }
 
-.cheesCard-back {
+.chessCard-back {
   background-color: var(--other4);
   color: #fff;
   display: flex;
@@ -266,18 +282,26 @@
   transform: rotateY(180deg);
 }
 
-.cheesCard-back img {
+.chessCard-back img {
   width: 100%;
   height: auto;
 }
 
-.cheesCard-back p {
+.chessCard-back p {
   width: 30%;
 }
 
 /* le formulaire */
+.alignLeft {
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
 .containerForm {
-  width: 60%;
+  margin-right: 7%;
+  margin-top: 5%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
