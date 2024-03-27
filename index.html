@@ -6,24 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
 
 <body>
 
     <div class="container">
-        <div class="about">
+        <div class="about topNav">
             <h2> About</h2>
         </div>
-        <div class="projets">
+        <div class="projets topNav">
             <h2> Porfolio Ana Baché <br> Projets 2024</h2>
         </div>
-        <div class="contact">
+        <div class="contact topNav">
             <h2> contact</h2>
         </div>
         <div class="projet1">
 
+                  <!-- Swiper -->
+  <div class="swiper mySwiper padding ">
+    
+    <div class="swiper-wrapper border10">
+      <div class="swiper-slide"><img src="./assets/captures/concept-4el.PNG" alt=""></div>
+      <div class="swiper-slide"><img src="./assets/captures/hotel-eau-4elements.PNG" alt=""></div>
+      <div class="swiper-slide"><img src="./assets/captures/hptel-feu4el.PNG" alt=""></div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
         </div>
-        <div class="projet2"></div>
+        <div class="projet2 flex gap padding">
+            <div class="cardProjet">
+                <div class="cardProjet-front">
+                  <p class="titleProjrt">Projet template Berenice</p>
+                  <p class="subtitle">Création d'un prototype application de téléphone mobile </p>
+                </div>
+                <div class="cardProjet-back">
+                  <img src="./assets/captures/ban1.PNG" alt="">
+                </div>
+              </div>
+
+              <div class="cardProjet">
+                <div class="cardProjet-front">
+                  <p class="titleProjrt">John Doe</p>
+                  <p class="subtitle">Web Dev</p>
+                </div>
+                <div class="cardProjet-back">
+                  <img src="./assets/captures/ban1.PNG" alt="">
+                </div>
+              </div>
+
+              <div class="cardProjet">
+                <div class="cardProjet-front">
+                  <p class="titleProjrt">John Doe</p>
+                  <p class="subtitle">Web Dev</p>
+                </div>
+                <div class="cardProjet-back">
+                  <img src="./assets/captures/ban1.PNG" alt="">
+                </div>
+              </div>
+              <div class="cardProjet">
+                <div class="cardProjet-front">
+                  <p class="titleProjrt">John Doe</p>
+                  <p class="subtitle">Web Dev</p>
+                </div>
+                <div class="cardProjet-back">
+                  <img src="./assets/captures/ban1.PNG" alt="">
+                </div>
+              </div>
+
+        </div>
 
         <!--Hard skills-->
         <div class="html logoSkill">
@@ -112,7 +172,9 @@
     </footer>
 
 
-    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+    <script src="./node_modules/animejs/lib/anime.min.js"> defer</script>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"> defer</script>
+    <script src="./slider.js"> defer</script>
     <script src="app.js" defer></script>
 
 

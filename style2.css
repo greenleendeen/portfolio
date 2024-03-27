@@ -1,4 +1,160 @@
+.cardProjet {
+  color: #1b1b1b;
+  width: 190px;
+  height: 254px;
+  position: relative;
+  outline: 6px solid #f5f5f5;
+  border-radius: 8px;
+  line-height: 150%;
+  padding: 16px;
+  background: #ff930f;
+  background-blend-mode: multiply;
+  background: linear-gradient(to top, #ff930f, #ffcc33);
+  transition: background-color 1s ease-in-out;
+  overflow: hidden;
+}
 
+.cardProjet-front {
+  bottom: 16px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.cardProjet-back {
+  transform: translateX(120%);
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+
+/*Text*/
+.titleProjet {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+/*Text divider*/
+.titleProjet::after {
+  content: "";
+  display: block;
+  width: 50%;
+  border-radius: 50%;
+  height: 2px;
+  margin: 2px auto;
+  background-color: #1b1b1b;
+}
+
+
+/*Hover*/
+.cardProjet:hover {
+  background-color: #1b1b1b25;
+}
+
+.cardProjet:hover .cardProjet-front {
+  transform: translateX(-100%);
+}
+
+.cardProjet:hover .cardProjet-back {
+  transform: translateX(0);
+}
+
+
+
+
+/*
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cards .red {
+  background-image: url(./assets/captures/ban1.PNG);
+  background-repeat: no-repeat;
+ background-size: cover;
+ 
+}
+
+/*.red img {
+  width:30%;
+  height:auto;
+
+
+.cards .blue {
+  background-image: url(./assets/captures/Capture.PNG);
+}
+
+.cards .green {
+  background-image: url(./assets/captures/ban3.PNG);
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 170px;
+  width: 1000px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: .7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(3px);
+  transform: scale(0.9, 0.9);
+} */
+
+
+
+/*swiper 
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
 .card {
     width: 300px;
     height: 200px;

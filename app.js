@@ -21,7 +21,6 @@ grid.addEventListener('click',()=>{
 
 
 
-
  
 
 
