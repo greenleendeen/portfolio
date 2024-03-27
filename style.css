@@ -12,8 +12,7 @@
   --other2: #E3651D;
   --other3: #CDF5FD;
   --other4: #005B41;
-  background: #A3C9AA;
-  ;
+  --background: #A3C9AA;
   --other5: #A3C9AA;
   --otherSecondary: #1E3D6D;
 
@@ -51,17 +50,17 @@
 
 .about {
   grid-area: about;
-  background-color: #005B41;
+  /*background-color: #005B41;*/
 }
 
 .projets {
   grid-area: projets;
-  background-color: #356aba;
+ /* background-color: #356aba;*/
 }
 
 .contact {
   grid-area: contact;
-  background-color: #FF9BD2;
+  /*background-color: #FF9BD2;*/
 }
 
 .projet1 {
@@ -73,7 +72,7 @@
 
 .projet2 {
   grid-area: projet2;
-  background-color: #00583f;
+  /*background-color: #00583f;*/
 }
 
 /* hard skills*/
@@ -166,6 +165,10 @@
 
 .padding {
   padding: 7%;
+}
+
+.bgGreen {
+  background-color: var(--background);
 }
 /* la class alignLeft pour le formulaire ecriteplus bas dans mon css
 .alignLeft {
@@ -323,18 +326,24 @@
 .chessCard-back p {
   width: 30%;
 }
+/* section contact*/
+
+.sectionContact {
+  width: 100%;
+}
 
 /* le formulaire */
-.alignLeft {
+
+ /*.alignRight {
   display: flex;
-  justify-content: flex-end;
- 
-}
+  justify-content: flex-start;
+  
+} */
 
 .containerForm {
   margin-right: 7%;
   margin-top: 5%;
-  width: 50%;
+  width:45%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -342,14 +351,15 @@
   position: relative;
   border-radius: 3px;
   border: 1px solid var(--other5);
-  background: linear-gradient(to right, #4e8760, #27a66d);
+  background: linear-gradient(to right,#1B9C85, #27a66d);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
 }
 
 .containerForm form .descr {
   font-size: 20px;
   font-weight: 500;
-  color: #e8e8e8;
+  color: var(--otherSecondary);
   margin-bottom: 25px;
   margin-top: 25px;
   text-align: center;
@@ -372,9 +382,9 @@ textarea {
   font-size: 100%;
   padding: 0.7em;
   outline: none;
-  color: #e8e8e8;
+  color:  var(--otherSecondary);
   border: none;
-  border-bottom: 2px solid #e8e8e8;
+  border-bottom: 2px solid var(--otherSecondary);
   background: transparent;
   border-radius: none;
   width: 100%;
@@ -385,7 +395,8 @@ textarea {
   font-size: 100%;
   position: absolute;
   left: 0;
-  color: #e8e8e8;
+  color: var(--otherSecondary);
+  font: small-caps bold;
   padding: 0.7em;
   margin-left: 0.1em;
   pointer-events: none;
@@ -413,7 +424,7 @@ textarea {
 }
 
 .form button {
-  color: #e8e8e8;
+  color:  var(--otherSecondary);
   font-size: 15px;
   align-self: flex-start;
   padding: 0.6em;
@@ -433,7 +444,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #e8e8e8;
+  background-color:  var(--otherSecondary);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -446,6 +457,28 @@ textarea {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* reseaux sociaux*/
+.rezo50 {
+  margin-top: 5%;
+  width: 45%; 
+  
+}
+
+.rezo50>div {
+  width: 25%;
+}
+
+.rezo50 a {
+  width: 25%;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--otherSecondary);
+}
+.rezo img {
+  width: 70%;
+}
+
 
 /* le slider*/
 body {
@@ -460,22 +493,29 @@ body {
 .swiper {
   width: 100%;
   height: 100%;
+ 
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: var(--other5);
   display: flex;
   justify-content: center;
   align-items: center;
+  color:#00523b;
+  border: 10px solid var(--other5);
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  
 }
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 95%;
+  /*height: 100%;
+  object-fit: cover;*/
 }
 
 /* cartes projets dans la fenêtre projet2*/
