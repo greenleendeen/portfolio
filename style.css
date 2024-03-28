@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+/*
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=WindSong:wght@500&display=swap');
+
+font-family: 'Inter', sans-serif;
+font-family: 'WindSong', cursive;*/
+
 :root {
   --primary: #1B9C85;
   --secondary: #F1F5A8;
@@ -15,9 +21,9 @@
   --background: #A3C9AA;
   --other5: #A3C9AA;
   --otherSecondary: #1E3D6D;
-
-
 }
+
+
 
 /*le conteiner grid*/
 .container {
@@ -528,7 +534,7 @@ body {
   border-radius: 8px;
   line-height: 150%;
   padding: 16px;
-  background: #ff930f;
+  background: var(--other2);
   background-blend-mode: multiply;
   background: linear-gradient(to top, #ff930f, #ffcc33);
   transition: background-color 1s ease-in-out;
@@ -536,7 +542,7 @@ body {
 }
 
 .cardProjet-front {
-  bottom: 16px;
+  bottom: 12px;
   left: 0;
   position: absolute;
   width: 100%;
@@ -579,3 +585,4 @@ body {
 .cardProjet:hover .cardProjet-back {
   transform: translateX(0);
 }
+
