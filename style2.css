@@ -1,3 +1,71 @@
+/*livre book*/
+.book {
+  position: relative;
+  border-radius: 10px;
+  width: 220px;
+  height: 300px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.book:hover .cover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+
+
+/*card projet
 .cardProjet {
   color: #1b1b1b;
   width: 190px;
@@ -27,14 +95,14 @@
   transform: translateX(120%);
   transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
+*/
 
-
-/*Text*/
+/*Text
 .titleProjet {
   font-size: 1.3rem;
   font-weight: bold;
 }
-/*Text divider*/
+/*Text divider
 .titleProjet::after {
   content: "";
   display: block;
@@ -46,7 +114,7 @@
 }
 
 
-/*Hover*/
+/*Hover
 .cardProjet:hover {
   background-color: #1b1b1b25;
 }
@@ -58,7 +126,7 @@
 .cardProjet:hover .cardProjet-back {
   transform: translateX(0);
 }
-
+*/
 
 
 

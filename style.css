@@ -4,11 +4,16 @@
   box-sizing: border-box;
 }
 
-/*
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=WindSong:wght@500&display=swap');
+@font-face {
+  src: url("./fonts/Junge/Junge-Regular.ttf") format("truetype");
+  font-family: "junge";
+}
 
-font-family: 'Inter', sans-serif;
-font-family: 'WindSong', cursive;*/
+@font-face {
+  src: url("./fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("truetype");
+  font-family: "Libre_Baskerville";
+}
+
 
 :root {
   --primary: #1B9C85;
@@ -23,12 +28,47 @@ font-family: 'WindSong', cursive;*/
   --otherSecondary: #1E3D6D;
 }
 
+/*les typos*/
+h1 {
+  font-family: 'Libre-Baskerville', cursive;
+  font-size: 2rem;
+  color:var(--primaryColor); 
+}
+
+h2 {
+  font-family: 'Libre-Baskerville', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color:var(--primaryColor);
+  width: 100%;
+}
+
+h3 {
+  font-family:'Libre-Baskerville', sans-serif;
+  font-size: 1.5rem;
+  color:var(--contentColor);
+}
+
+p {
+  font-family:'Junge', sans-serif;
+  font-weight: 500;
+  color: var(--contentColor);
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+}
+
+
 
 
 /*le conteiner grid*/
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 15px 12px;
   grid-auto-flow: row;
@@ -542,13 +582,20 @@ body {
 }
 
 .cardProjet-front {
-  bottom: 12px;
+  padding: 5%;
   left: 0;
   position: absolute;
   width: 100%;
-  text-align: center;
+  text-align: left;
   transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+ 
 }
+.cardProjet-front h3 {
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 4%;
+}
+
 
 .cardProjet-back {
   transform: translateX(120%);
@@ -586,3 +633,84 @@ body {
   transform: translateX(0);
 }
 
+/*responsive*/
+
+@media screen and (max-width:540px) {
+
+  
+
+  
+  .padding{
+  padding: 0 3%;
+  }
+
+  h1 {
+    font-family: 'Libre-Baskerville', cursive;
+    font-size: 1.8rem;
+    color:var(--primaryColor); 
+  }
+  
+  h2 {
+    font-family: 'Libre-Baskerville', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:var(--primaryColor);
+    width: 100%;
+  }
+  
+  h3 {
+    font-family:'Libre-Baskerville', sans-serif;
+    font-size: 1rem;
+    color:var(--contentColor);
+  }
+  
+  p {
+    font-family:'Junge', sans-serif;
+    font-weight: 500;
+    color: var(--contentColor);
+    font-size: 0.8rem;
+  }
+
+/*le slider*/
+  .container{
+    /*9 colonnes et 19 lignes*/
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "about projets  contact"
+    "projet1 projet1 projet1"
+    "projet1 projet1 projet1"
+    "projet1 projet1 projet1"
+    "projet2 projet2 projet2"
+    "projet2 projet2 projet2"
+    "projet2 projet2 projet2"
+    "html css javaScript" 
+    "php sql figma" 
+    "notion frameworks ."
+    "projet3 projet3 projet3"
+    "projet3 projet3 projet3"
+    "lib chess pad ";
+/*
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    grid-template-areas: 
+    "about about about projets projets projets contact contact contact"
+    "projet1 projet1 projet1 projet1 projet1 projet1 projet1 projet1 projet1"
+    "projet1 projet1 projet1 projet1 projet1 projet1 projet1 projet1 projet1"
+    "projet1 projet1 projet1 projet1 projet1 projet1 projet1 projet1 projet1"
+    "projet2 projet2 projet2 projet2 projet2 projet2 projet2 projet2 projet2"
+    "projet2 projet2 projet2 projet2 projet2 projet2 projet2 projet2 projet2"
+    "projet2 projet2 projet2 projet2 projet2 projet2 projet2 projet2 projet2"
+    "html css javaScript php sql figma notion frameworks ."
+    "projet3 projet3 projet3 projet3 projet3 projet3 projet3 projet3 projet3"
+    "projet3 projet3 projet3 projet3 projet3 projet3 projet3 projet3 projet3"
+    "lib lib lib chess chess chess pad pad pad"
+    "lib lib lib chess chess chess pad pad pad"
+    "lib lib lib chess chess chess pad pad pad";
+   */
+   
+  }
+
+}
