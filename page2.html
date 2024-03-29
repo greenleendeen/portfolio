@@ -2,85 +2,225 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
 
-    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
 
 <body>
 
+  <div class="container">
 
-    <div class="card">
+
+    <div class="nav">
+      <div class="about"></div>
+      <div class="projets"></div>
+      <div class="contact"></div>
+    </div>
+
+    <!-- <div class="felx topNav">
+        <div class="about topNav">
+            <h2> Curriculum vitae</h2>
+        </div>
+        <div class="projets topNav">
+            <h2> Porfolio Ana Baché <br> Projets 2024</h2>
+        </div>
+        <div class="contact topNav">
+            <a href="./pageFormContact.html"><h2> contact</h2></a>
+        </div>
+
+      </div>-->
+    <div class="projet1">
+
+      <!-- Swiper -->
+      <div class="swiper mySwiper padding ">
+
+        <div class="swiper-wrapper border10">
+          <div class="swiper-slide"><img src="./assets/bigColor3.PNG" alt="">
+            <h2>mes projets</h2>
+          </div>
+
+          <div class="swiper-slide">
+
+            <img src="./assets/captures/concept-4el.PNG" alt="">
+
+          </div>
+
+          <div class="swiper-slide"> <img src="./assets/captures/hotel-eau-4elements.PNG" alt="">
+
+          </div>
+          <div class="swiper-slide">
+
+            <img src="./assets/captures/hptel-feu4el.PNG" alt="">
+
+          </div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+    <div class="projet2 flex gap padding">
+      <div class="cardProjet">
+        <div class="cardProjet-front">
+          <h3 class="titleProjrt">Projet "Template Berenice"</h3>
+          <p class="subtitle">Création d'un prototype application de téléphone mobile </p>
+        </div>
+        <div class="cardProjet-back">
+          <img src="./assets/captures/ban1.PNG" alt="">
+        </div>
+      </div>
+
+      <div class="cardProjet">
+        <div class="cardProjet-front">
+          <h3 class="titleProjrt">Men's Sportsweare</h3>
+          <p class="subtitle">integration de la maquette, site responsif, utilisation du JS et des bibliothèques</p>
+        </div>
+        <div class="cardProjet-back">
+          <img src="./assets/captures/minSport.PNG" alt="">
+        </div>
+      </div>
+
+      <div class="cardProjet">
+        <div class="cardProjet-front">
+          <h3 class="titleProjrt">Site réseau hôtellier "4Elements"</h3>
+          <p class="subtitle">Integration de la maquette, formulaire</p>
+        </div>
+        <div class="cardProjet-back">
+          <img src="./assets/captures/min4Elements.PNG" alt="">
+        </div>
+      </div>
+      <div class="cardProjet">
+        <div class="cardProjet-front">
+          <p class="titleProjrt">MNTN Site d'escalade en montagne</p>
+          <p class="subtitle">Web Dev</p>
+        </div>
+        <div class="cardProjet-back">
+          <img src="./assets/captures/minMNTN2.PNG" alt="">
+        </div>
+      </div>
+      <div class="cardProjet">
+        <div class="cardProjet-front">
+          <p class="titleProjrt">site producteur de miel "La Ruche"</p>
+          <p class="subtitle">integration de la maquette, site responsif</p>
+        </div>
+        <div class="cardProjet-back">
+          <img src="./assets/captures/minLaRuche3.PNG" alt="">
+        </div>
+      </div>
+      <div class="cardProjet">
+        <div class="cardProjet-front">
+          <p class="titleProjrt">John Doe</p>
+          <p class="subtitle">Web Dev</p>
+        </div>
+        <div class="cardProjet-back">
+          <img src="./assets/captures/ban1.PNG" alt="">
+        </div>
+      </div>
+
+    </div>
+
+    <!--Hard skills-->
+
+    <div class="html logoSkill">
+      <h2> html
+        <img src="./assets/LogosHardSkills/icons8-html5-48.png" alt="">
+      </h2>
+    </div>
+    <div class="css logoSkill">
+      <h2> CSS </h2>
+      <img src="./assets/LogosHardSkills/icons8-css-50.png" alt="">
+    </div>
+    <div class="javaScript logoSkill">
+      <h2> JavaScript</h2>
+      <img src="./assets/LogosHardSkills/icons8-js-48.png" alt="">
+    </div>
+    <div class="php logoSkill">
+      <h2> PHP</h2>
+      <img src="./assets/LogosHardSkills/icons8-logo-php-50.png" alt="">
+    </div>
+    <div class="sql logoSkill">
+      <h2> MySql</h2>
+      <img src="./assets/LogosHardSkills/icons8-mysql-50.png" alt="">
+    </div>
+    <div class="figma logoSkill">
+      <h2> Figma</h2>
+      <img src="./assets/LogosHardSkills/icons8-figma-48.png" alt="">
+    </div>
+    <div class="notion logoSkill">
+      <h2> Notion</h2>
+      <img src="./assets/LogosHardSkills/icons8-notion-64.png" alt="">
+    </div>
+    <div class="frameworks logoSkill">
+      <h2> Frameworks</h2>
+      <img src="./assets/LogosHardSkills/icons8-symfony.png" alt="">
+    </div>
+
+
+    <div class="projet3"></div>
+
+    <!-- soft artistique-->
+    <div class="lib ">
+      <div class="BoocksCard">
         <p><span>Literature </span></p>
         <p><span>Musique</span></p>
         <p><span>Arts Visuels</span></p>
         <p><span>Cuisine</span></p>
-    </div>
-
-<!--Card chess anim-->
-    <div class="card">
-        <p class="card-title">Product Name</p>
-        <p class="small-desc">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
-          veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
-          officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
-          eum nihil itaque!
-        </p>
-        <div class="go-corner">
-          <div class="go-arrow">→</div>
-        </div>
-      </div>
-
-<!--Card chess anim2-->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <p></p>
-
-            
-            <img src="./assets/icons8-échiquier-100.png" alt="">
-          </div>
-          <div class="card-back">
-            <p>Magnus Carlsen contre Helgi Ass Gretarsson European Club Cup (2003): mat en 2coups avec les blancs</p>
-            <img src="./assets/Magnus-Carlsen -blancs-vs Gretarsson-mat-en-2coups.PNG" alt="">
-          </div>
-        </div>
-      </div>
-
-
-     <!-- <div class="cards">
-        <div class="card red">
-            <p class="tip">Hover Me</p>
-            <p class="second-text">Lorem Ipsum</p>
-        </div>
-        <div class="card blue">
-            <p class="tip">Hover Me</p>
-            <p class="second-text">Lorem Ipsum</p>
-        </div>
-        <div class="card green">
-            <p class="tip">Hover Me</p>
-            <p class="second-text">Lorem Ipsum</p>
-        </div>
-    </div> 
--->
-    
-    <div class="cardProjet">
-      <div class="cardProjet-front">
-        <p class="titleProjrt">John Doe</p>
-        <p class="subtitle">Web Dev</p>
-      </div>
-      <div class="cardProjet-back">
-        <img src="./assets/captures/ban1.PNG" alt="">
+        <p><span>Sport</span></p>
       </div>
     </div>
 
+    <!--Card chess anim2-->
+    <div class="chess chessCard border10">
+      <div class="chessCard-inner">
+        <div class="chessCard-front">
+          <p>Chess Games</p>
+          <img src="./assets/icons8-échiquier-100.png" alt="">
+        </div>
+        <div class="chessCard-back">
 
-      <script src="./node_modules/swiper/swiper-bundle.min.js"> defer</script>
-    <script src="./node_modules/animejs/lib/anime.min.js"></script>
-    <script src="./slider.js"> </script>
-    <script src="app.js" defer></script>
+          <img src="./assets/Magnus-Carlsen-blancs-vs-Gretarsson-mat-en-2coups.PNG" alt="">
+
+          <p>Magnus Carlsen contre Helgi Ass Gretarsson European Club Cup (2003): mat en 2coups avec les
+            blancs</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pad flex  gridd-anim border10">
+      <!-- grid animée avec anim-js-->
+      <div class="el box1 flex"></div>
+      <div class="el box3 flex"></div>
+      <div class="el box1 flex"></div>
+      <div class="el box2 flex"></div>
+      <div class="el box1 flex"></div>
+      <div class="el box3 flex"></div>
+      <div class="el box2 flex"></div>
+      <div class="el box2 flex"></div>
+      <div class="el box3 flex"></div>
+    </div>
+
+  </div>
+  <footer>
+
+
+  </footer>
+
+
+  <script src="./node_modules/animejs/lib/anime.min.js"> defer</script>
+  <script src="./node_modules/swiper/swiper-bundle.min.js"> defer</script>
+  <script src="./slider.js"> defer</script>
+  <script src="app.js" defer></script>
+
 
 </body>
 

@@ -67,53 +67,101 @@ a {
 
 /*le conteiner grid*/
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 15px 12px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "about about about projets projets projets contact contact contact"
+  display: grid; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 14px 12px; 
+  grid-template-areas: 
+    "nav nav nav nav nav nav nav nav nav"
     "projet1 projet1 projet1 projet1 projet1 projet2 projet2 projet2 projet2"
     "projet1 projet1 projet1 projet1 projet1 projet2 projet2 projet2 projet2"
     "projet1 projet1 projet1 projet1 projet1 projet2 projet2 projet2 projet2"
-    "html css javaScript php projet3 projet3 projet3 projet3 projet3"
-    "sql figma notion frameworks projet3 projet3 projet3 projet3 projet3"
+    "skills skills skills skills projet3 projet3 projet3 projet3 projet3"
+    "skills skills skills skills projet3 projet3 projet3 projet3 projet3"
     "lib lib lib chess chess chess pad pad pad"
     "lib lib lib chess chess chess pad pad pad"
-    "lib lib lib chess chess chess pad pad pad";
+    "lib lib lib chess chess chess pad pad pad"; 
 }
+.nav {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    "about projets contact"
+    ". . ."; 
+  grid-area: nav; 
+  
+}
+.about {
+  justify-self: center; 
+  align-self: center; 
+  grid-area: about; 
+}
+.projets {
+  justify-self: center; 
+  align-self: center; 
+  grid-area: projets; 
+}
+.contact {
+  justify-self: center; 
+  align-self: center; 
+  grid-area: contact; 
+}
+.projet1 { grid-area: projet1; }
+.projet2 { grid-area: projet2; }
+.skills {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 3px 3px; 
+  grid-template-areas: 
+    "html css javaScript"
+    "php sql figma"
+    "notion frameworks new"; 
+  grid-area: skills; 
+}
+.html { grid-area: html; 
+  text-align: center;
+ 
+}
+.css { grid-area: css; 
+   text-align: center;
+}
+.javaScript { grid-area: javaScript;
+text-align: center; }
+.php { grid-area: php; 
+  text-align: center;
+}
+.sql { grid-area: sql; 
+  text-align: center;
+}
+.figma { grid-area: figma; 
+  text-align: center;}
+.notion { grid-area: notion;
+  text-align: center; }
+.frameworks { grid-area: frameworks; 
+  text-align: center;}
+.new { grid-area: new;
+ }
+
+ /*projet3*/
+.projet3 { grid-area: projet3; }
+.lib { grid-area: lib; }
+.chess { grid-area: chess; }
+.pad { grid-area: pad; }
+
 
 /* les parametres des grid-area*/
 .topNav {
   display: flex;
   align-items: center;
-  border: 10px solid var(--other5);
+  border: 7px solid var(--other5);
   border-radius: 10px;
   justify-content: center;
   font-size: 24px;
-}
-
-.about {
-  grid-area: about;
-  /*background-color: #005B41;*/
-}
-
-.projets {
-  grid-area: projets;
- /* background-color: #356aba;*/
-}
-
-.contact {
-  grid-area: contact;
-  /*background-color: #FF9BD2;*/
-}
-
-.projet1 {
-  grid-area: projet1;
-}
-.swiper-button-next, .swiper-button-prev{
-  color: var(--otherSecondary);
 }
 
 .projet2 {
@@ -122,67 +170,28 @@ a {
 }
 
 /* hard skills*/
+.divSkills {
+  width: 50%;
+  flex-wrap: nowrap;
+  gap:1%
+}
 .logoSkill {
   display: flex;
   align-items: center;
+  flex-direction: column;
   border: 10px solid var(--primary);
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 20px;
+  padding: 3%;
 }
 
 .logoSkill img {
   width: 50px;
   height: 50px;
 }
-.html {
-  grid-area: html;
-}
-
-.css {
-  grid-area: css;
-}
-
-.javaScript {
-  grid-area: javaScript;
-}
-
-.php {
-  grid-area: php;
-}
-
-.sql {
-  grid-area: sql;
-}
-
-.figma {
-  grid-area: figma;
-}
-
-.notion {
-  grid-area: notion;
-}
-
-.frameworks {
-  grid-area: frameworks;
-}
 
 /* à droite des hard skills*/
-.projet3 {
-  grid-area: projet3;
-}
-
-.lib {
-  grid-area: lib;
-}
-
-.chess {
-  grid-area: chess;
-}
-
-.pad {
-  grid-area: pad;
-}
 
 /* classes generales */
 .flex {
@@ -244,7 +253,6 @@ a {
   background: linear-gradient(315deg, #305fa7, #3971c7);
   box-shadow: -1px -1px 5px #3367b4,
     1px 1px 5px #376dc0;
-
 }
 
 .box2 {
@@ -554,7 +562,6 @@ body {
   border-radius: 10px;
   justify-content: center;
   font-size: 24px;
-  
 }
 
 .swiper-slide img {
@@ -563,6 +570,11 @@ body {
   /*height: 100%;
   object-fit: cover;*/
 }
+
+.swiper-button-next, .swiper-button-prev{
+  color: var(--otherSecondary);
+}
+
 
 /* cartes projets dans la fenêtre projet2*/
 .cardProjet {
@@ -637,22 +649,19 @@ body {
 
 @media screen and (max-width:540px) {
 
-  
-
-  
-  .padding{
+ .padding{
   padding: 0 3%;
   }
 
   h1 {
     font-family: 'Libre-Baskerville', cursive;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color:var(--primaryColor); 
   }
   
   h2 {
     font-family: 'Libre-Baskerville', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color:var(--primaryColor);
     width: 100%;
@@ -672,13 +681,52 @@ body {
   }
 
 /*le slider*/
-  .container{
-    /*9 colonnes et 19 lignes*/
+
+
+/*
+
+.container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 5px 5px; 
+  grid-template-areas: 
+    "about projects contact"
+    "projet1 projet1 projet1"
+    "projet1 projet1 projet1"
+    "projet1 projet1 projet1"
+    "projet2 projet2 projet2"
+    "projet2 projet2 projet2"
+    "projet2 projet2 projet2"
+    "html css javaScript"
+    "php sql figma"
+    "notion frameworks n"
+    "projet3 projet3 projet3"
+    "projet3 projet3 projet3"
+    "lib chess pad"
+    "lib chess pad"
+    "lib chess pad"; 
+}
+
+
+
+*/
+  /*.container{
+    /*9 colonnes et 13 lignes
+
     display: grid;
+    
+    grid-auto-rows: 1fr; 
+   /* grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+   grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-columns: 1fr 1fr 1fr;
+   /*grid-template-rows: repeat(auto-fit, minmax(50px,0.5fr));
+
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    grid-auto-flow: row;
     grid-template-areas: 
-    "about projets  contact"
+    "about projets contact"
     "projet1 projet1 projet1"
     "projet1 projet1 projet1"
     "projet1 projet1 projet1"
@@ -690,7 +738,7 @@ body {
     "notion frameworks ."
     "projet3 projet3 projet3"
     "projet3 projet3 projet3"
-    "lib chess pad ";
+    "lib chess pad";}*/
 /*
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -711,6 +759,70 @@ body {
     "lib lib lib chess chess chess pad pad pad";
    */
    
+   .topNav {
+    display: flex;
+    align-items: center;
+    border: 10px solid var(--other5);
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
   }
 
+  /* hard skills*/
+.logoSkill {
+  display: flex;
+  align-items: center;
+  border: 5px solid var(--primary);
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 12px;
+  flex-direction: column;
 }
+
+.logoSkill img {
+  width: 70%;
+  height: auto;
+  
+}
+.html {
+  grid-area: html;
+ 
+}
+
+.css {
+  grid-area: css;
+
+}
+
+.javaScript {
+  grid-area: javaScript;
+
+}
+
+.php {
+  grid-area: php;
+
+}
+
+.sql {
+  grid-area: sql;
+
+}
+
+.figma {
+  grid-area: figma;
+;
+}
+
+.notion {
+  grid-area: notion;
+
+}
+
+.frameworks {
+  grid-area: frameworks;
+
+}
+
+  }
+
